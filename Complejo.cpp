@@ -2,32 +2,32 @@
 #include<math.h>
 
 Complejo::Complejo(double pReal, double pImaginario){
-	real= pReal;
-	imaginario= pImaginario;
+	this->real= pReal;
+	this->imaginario= pImaginario;
 }
 
 void Complejo::setReal(const double pReal){
-	real = pReal;
+	this->real = pReal;
 }
 
 void Complejo::setImaginario(const double pImaginario){
-	imaginario = pImaginario;
+	this->imaginario = pImaginario;
 }
 
 const double Complejo::getReal()const{
-	return real;
+	return this->real;
 }
 
 const double Complejo::getImaginario()const{
-	return imaginario;
+	return this->imaginario;
 }
 
 void Complejo::mostrarComplejo(){
 	if(getImaginario()<0){
-		cout<<"El numero complejo es: "<<getReal()<<getImaginario()<<"i"<<endl;
+		cout<<"El numero complejo es: "<<this->real<<this->imaginario<<"i"<<endl;
 	}
 	else{
-		cout<<"El numero complejo es: "<<getReal()<<"+"<<getImaginario()<<"i"<<endl;
+		cout<<"El numero complejo es: "<<this->real<<"+"<<this->imaginario<<"i"<<endl;
 	}
 }
 
@@ -60,8 +60,8 @@ void Complejo::sumaform1(Complejo *ptr1, Complejo *ptr2){
 //1-ptr no const  a datos const
 //forma dos.
 void Complejo::suma(const Complejo *ptr3){
-	real = real + ptr3->real;
-	imaginario = imaginario + ptr3->imaginario;
+	this->real = real + ptr3->real;
+	this->imaginario = imaginario + ptr3->imaginario;
 }
 
 //2-ptr const a datos no const
