@@ -6,6 +6,11 @@ Complejo::Complejo(double pReal, double pImaginario){
 	this->imaginario= pImaginario;
 }
 
+Complejo::Complejo(){
+	this->real = 0;
+	this->imaginario = 0;
+}
+
 void Complejo::setReal(const double pReal){
 	this->real = pReal;
 }
@@ -78,4 +83,27 @@ Complejo Complejo::sumaform3(const Complejo *const ptr6, const Complejo *const p
 	return sumaform3;
 }
 
+//Sobre carga de operadores
+//Función amiga(fiend)
+Complejo &operator +(const Complejo &c1, const Complejo &c2){
+	double real = c1.real + c2.real;
+	double imaginario = c1.imaginario + c2.imaginario;
+	//Asignación de memoria dinamica
+	return *(new Complejo(real,imaginario));
+}
 
+ostream &operator <<(ostream &mensaje, const Complejo &complejo){
+	char ope;
+	if(complejo.imaginario >0){
+		ope = '+';
+		mensaje<<complejo.real<<ope<<complejo.imaginario<<"i"<<endl;	
+	}
+	else{
+		mensaje<<complejo.real<<complejo.imaginario<<"i"<<endl;	
+	}	
+	return mensaje;
+}
+//Una mejor forma de implementar la función amiga u optimizarla
+Complejo &operator -(const Complejo &c1, const Complejo &c2){
+	return *(new Complejo(c1.real - c2.real, c1.imaginario - c2.imaginario));
+}

@@ -8,6 +8,7 @@ int main()
 	cout<<"---------------Prueba--------------"<<endl;
 	Complejo c1(-2,3), c2(8,-5), resultado(0,0);
 	Complejo c3(5,8);
+	Complejo resultado2, resultado3;
 	c1.mostrarComplejo();
 	c2.mostrarComplejo();
 	c3.mostrarComplejo();
@@ -38,6 +39,18 @@ int main()
 	cout<<"Suma de complejos forma 3 optimizada"<<endl;
 	resultado = resultado.sumaform3(&c1,&c2);
 	resultado.mostrarComplejo();
-
+	cout<<"\n";
+	cout<<"Sobre carga de operadores"<<endl;
+	cout<<"Suma"<<endl;
+	resultado2 = c1 + c3;
+	resultado2.mostrarComplejo();
+	cout<<"Mejor forma de imprimir el resultado"<<endl;
+	cout<<resultado2;
+	cout<<"Resta"<<endl;
+	//Se restan c2 de la linea 9 y 
+	// como c3 usa la forma 2  y este usa ptr no const  a datos const
+	resultado3 = c2 - c3;
+	cout<<resultado3;
+	
 	return 0;
 }

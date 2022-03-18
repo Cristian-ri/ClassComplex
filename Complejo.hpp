@@ -2,12 +2,20 @@
 using std::cout;
 using std::endl;
 using std::cin;
+using std::ostream;
 
 class Complejo{
+	
+	friend Complejo &operator +(const Complejo &, const Complejo &);
+	friend ostream &operator <<(ostream &, const Complejo &);
+	friend Complejo &operator -(const Complejo &, const Complejo &);
+	
 	public:
 		//Constructor
 		//Tenemos parametros constantes o lo mismo que datos constantes
 		Complejo(const double, const double);
+		//Constructor por defecto
+		Complejo();
 		//Funciones miembros
 		//Paramatros constantes
 		void setReal(const double);
