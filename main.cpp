@@ -7,8 +7,8 @@ int main()
 	
 	cout<<"---------------Prueba--------------"<<endl;
 	Complejo c1(-2,3), c2(8,-5), resultado(0,0);
-	Complejo c3(5,8);
-	Complejo resultado2, resultado3;
+	Complejo c3(5,8),c4(-4,5),c5(8,-2);
+	Complejo resultado2, resultado3,resultado4;
 	c1.mostrarComplejo();
 	c2.mostrarComplejo();
 	c3.mostrarComplejo();
@@ -51,6 +51,13 @@ int main()
 	// como c3 usa la forma 2  y este usa ptr no const  a datos const
 	resultado3 = c2 - c3;
 	cout<<resultado3;
+	cout<<"\n";
+	cout<<"Producto de vectores: "<<endl;
+	resultado= c4*c5;
+	cout<<resultado;
+	resultado4= c4/c5;
+	
+	
 	
 	return 0;
 }
