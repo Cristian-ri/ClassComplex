@@ -125,7 +125,7 @@ Complejo &operator *(const Complejo &c1, const Complejo &c2){
 }
 
 Complejo &operator /(const Complejo &c1, const Complejo &c2){
-	double real = (c1.real)*(c2.real)-(c1.imaginario)*(c2.imaginario);
+	double real = (c1.real)*(c2.real)-(c1.imaginario)*((c2.imaginario);
 	double imaginario = (c1.imaginario)*(c2.real)+(c1.real)*(c2.imaginario);
 	return *(new Complejo(real,imaginario));
 }
