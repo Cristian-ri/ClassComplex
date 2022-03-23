@@ -25,7 +25,7 @@ class Complejo{
 		//Paramatros constantes
 		void setImaginario(const double);
 		void mostrarComplejo();
-		void conjugado();
+		Complejo conjugado(Complejo *const);
 		void modulo();
 		//Ptr no const a datos no const
 		void sumaform1(Complejo *, Complejo *);

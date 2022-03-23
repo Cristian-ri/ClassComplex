@@ -36,16 +36,8 @@ void Complejo::mostrarComplejo(){
 	}
 }
 
-void Complejo::conjugado(){
-	double c;
-	c = -1*getImaginario();
-	if(c<0){
-		cout<<"El numero complejo es: "<<getReal()<<c<<"i"<<endl;
-	}
-	else{
-		cout<<"El numero complejo es: "<<getReal()<<"+"<<c<<"i"<<endl;
-	}
-	
+Complejo Complejo::conjugado(Complejo *const ptrc1){
+	this->imaginario= ptrc1->imaginario * -1;
 }
 
 void Complejo::modulo(){
@@ -124,11 +116,12 @@ Complejo &operator *(const Complejo &c1, const Complejo &c2){
 	return *(new Complejo(real,imaginario));
 }
 
-Complejo &operator /(const Complejo &c1, const Complejo &c2){
+/*Complejo &operator /(const Complejo &c1, const Complejo &c2){
+	
 	double real = (c1.real)*(c2.real)-(c1.imaginario)*((c2.imaginario);
 	double imaginario = (c1.imaginario)*(c2.real)+(c1.real)*(c2.imaginario);
 	return *(new Complejo(real,imaginario));
-}
+}*/
 
 
 

@@ -18,8 +18,10 @@ int main()
 	cout<<"\n";
 	
 	cout<<"Conjugado de los complejos: "<<endl;
-	c1.conjugado();
-	c2.conjugado();
+	c1.conjugado(&c1);
+	c1.mostrarComplejo();
+	c2.conjugado(&c2);
+	c2.mostrarComplejo();
 	cout<<"\n";
 	cout<<"Modulo de un complejo"<<endl;
 	c3.modulo();
@@ -54,8 +56,8 @@ int main()
 	cout<<"\n";
 	cout<<"Producto de vectores: "<<endl;
 	resultado= c4*c5;
-	cout<<resultado;
-	resultado4= c4/c5;
+	/*cout<<resultado;
+	resultado4= c4/c5;*/
 	
 	
 	
