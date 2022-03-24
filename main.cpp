@@ -56,10 +56,11 @@ int main()
 	cout<<"\n";
 	cout<<"Producto de vectores: "<<endl;
 	resultado= c4*c5;
-	/*cout<<resultado;
-	resultado4= c4/c5;*/
-	
-	
+	cout<<resultado;
+	cout<<"\n";
+	cout<<"Division de vectores: "<<endl;
+	resultado4= c4/c5;
+	cout<<resultado4;
 	
 	return 0;
 }

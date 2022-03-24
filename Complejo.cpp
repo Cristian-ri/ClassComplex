@@ -100,28 +100,21 @@ Complejo &operator -(const Complejo &c1, const Complejo &c2){
 	return *(new Complejo(c1.real - c2.real, c1.imaginario - c2.imaginario));
 }
 
-//Modulo de un complejo representado con el operador binario
-// división con asignación
-/* Recordemos que  z = sqrt((x)^2 + (y)^2) sqrt()= 0.5 = 1/2*/
-/*Complejo &operator &(const Complejo &r, const Complejo &i){
-	double real =(r.getReal())*(r.getReal());
-	double imaginario = (i.getImaginario())*(i.getImaginario());
-	double *suma = real + imaginario;
-	return Complejo(*suma,0);
-}*/
-
 Complejo &operator *(const Complejo &c1, const Complejo &c2){
 	double real = (c1.real)*(c2.real)-(c1.imaginario)*(c2.imaginario);
 	double imaginario = (c1.imaginario)*(c2.real)+(c1.real)*(c2.imaginario);
 	return *(new Complejo(real,imaginario));
 }
 
-/*Complejo &operator /(const Complejo &c1, const Complejo &c2){
-	
-	double real = (c1.real)*(c2.real)-(c1.imaginario)*((c2.imaginario);
-	double imaginario = (c1.imaginario)*(c2.real)+(c1.real)*(c2.imaginario);
+Complejo &operator /(const Complejo &c1,  Complejo &c2){
+	c2.setImaginario(c2.getImaginario()*-1);
+	double real1 = (c1.real)*(c2.real)-(c1.imaginario)*((c2.imaginario));
+	double imaginario1 = (c1.imaginario)*(c2.real)+(c1.real)*(c2.imaginario);
+	double deno = (c2.getReal())*(c2.getReal())-(c2.getImaginario())*(c2.getImaginario())*-1;
+	double real = real1/ deno;
+	double imaginario = imaginario1 / deno;
 	return *(new Complejo(real,imaginario));
-}*/
+}
 
 
 

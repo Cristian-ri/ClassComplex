@@ -9,9 +9,8 @@ class Complejo{
 	friend Complejo &operator +(const Complejo &, const Complejo &);
 	friend ostream &operator <<(ostream &, const Complejo &);
 	friend Complejo &operator -(const Complejo &, const Complejo &);
-	friend Complejo &operator %(const Complejo &real, const Complejo &imaginario);
 	friend Complejo &operator *(const Complejo &, const Complejo &);
-	friend Complejo &operator /(const Complejo &, const Complejo &);
+	friend Complejo &operator /(const Complejo &, Complejo &);
 	
 	public:
 		//Constructor
