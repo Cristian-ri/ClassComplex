@@ -4,11 +4,12 @@ int main()
 {
 	int op;
 	int cantidadC;
-	
-	cout<<"---------------Prueba--------------"<<endl;
 	Complejo c1(-2,3), c2(8,-5), resultado(0,0);
 	Complejo c3(5,8),c4(-4,5),c5(8,-2);
 	Complejo resultado2, resultado3,resultado4;
+	double m;
+	
+	cout<<"---------------Prueba--------------"<<endl;
 	c1.mostrarComplejo();
 	c2.mostrarComplejo();
 	c3.mostrarComplejo();
@@ -61,6 +62,10 @@ int main()
 	cout<<"Division de vectores: "<<endl;
 	resultado4= c4/c5;
 	cout<<resultado4;
+	cout<<"\n";
+	cout<<"Modulo con sobrecargar: "<<endl;
+	m = !c1;
+	cout<<m;
 	
 	return 0;
 }

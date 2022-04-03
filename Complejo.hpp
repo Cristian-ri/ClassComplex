@@ -3,6 +3,8 @@ using std::cout;
 using std::endl;
 using std::cin;
 using std::ostream;
+#include<cmath>
+using std::sqrt;
 
 class Complejo{
 	
@@ -11,6 +13,7 @@ class Complejo{
 	friend Complejo &operator -(const Complejo &, const Complejo &);
 	friend Complejo &operator *(const Complejo &, const Complejo &);
 	friend Complejo &operator /(const Complejo &, Complejo &);
+	friend double operator !(const Complejo &);
 	
 	public:
 		//Constructor

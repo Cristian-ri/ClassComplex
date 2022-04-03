@@ -1,5 +1,6 @@
 #include "Complejo.hpp"
 #include<cmath>
+using std::pow;
 
 Complejo::Complejo(double pReal, double pImaginario){
 	this->real= pReal;
@@ -106,14 +107,24 @@ Complejo &operator *(const Complejo &c1, const Complejo &c2){
 	return *(new Complejo(real,imaginario));
 }
 
-Complejo &operator /(const Complejo &c1,  Complejo &c2){
+Complejo &operator /(const Complejo &c1, Complejo &c2){
+	
 	c2.setImaginario(c2.getImaginario()*-1);
 	double real1 = (c1.real)*(c2.real)-(c1.imaginario)*((c2.imaginario));
 	double imaginario1 = (c1.imaginario)*(c2.real)+(c1.real)*(c2.imaginario);
 	double deno = (c2.getReal())*(c2.getReal())-(c2.getImaginario())*(c2.getImaginario())*-1;
 	double real = real1/ deno;
 	double imaginario = imaginario1 / deno;
+		
 	return *(new Complejo(real,imaginario));
+
+}
+//Definimos con el tipo de dato double porque el resultado es un escalar 
+double operator!(const Complejo &ptrc2){
+	double suma = pow(ptrc2.real,2) + pow(ptrc2.imaginario,2);
+	double sqrt1 = sqrt(suma);
+	
+	return sqrt1;
 }
 
 
