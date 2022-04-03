@@ -2,19 +2,32 @@
 using std::cout;
 using std::endl;
 using std::cin;
+using std::ostream;
+#include<cmath>
+using std::sqrt;
 
 class Complejo{
+	
+	friend Complejo &operator +(const Complejo &, const Complejo &);
+	friend ostream &operator <<(ostream &, const Complejo &);
+	friend Complejo &operator -(const Complejo &, const Complejo &);
+	friend Complejo &operator *(const Complejo &, const Complejo &);
+	friend Complejo &operator /(const Complejo &, Complejo &);
+	friend double operator !(const Complejo &);
+	
 	public:
 		//Constructor
 		//Tenemos parametros constantes o lo mismo que datos constantes
 		Complejo(const double, const double);
+		//Constructor por defecto
+		Complejo();
 		//Funciones miembros
 		//Paramatros constantes
 		void setReal(const double);
 		//Paramatros constantes
 		void setImaginario(const double);
 		void mostrarComplejo();
-		void conjugado();
+		Complejo conjugado(Complejo *const);
 		void modulo();
 		//Ptr no const a datos no const
 		void sumaform1(Complejo *, Complejo *);
