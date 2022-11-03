@@ -77,11 +77,11 @@ Complejo Complejo::sumaform3(const Complejo *const ptr6, const Complejo *const p
 }
 
 //Sobre carga de operadores
-//Función amiga(fiend)
+//Funciï¿½n amiga(fiend)
 Complejo &operator +(const Complejo &c1, const Complejo &c2){
 	double real = c1.real + c2.real;
 	double imaginario = c1.imaginario + c2.imaginario;
-	//Asignación de memoria dinamica
+	//Asignaciï¿½n de memoria dinamica
 	return *(new Complejo(real,imaginario));
 }
 
@@ -96,7 +96,7 @@ ostream &operator <<(ostream &mensaje, const Complejo &complejo){
 	}	
 	return mensaje;
 }
-//Una mejor forma de implementar la función amiga u optimizarla
+//Una mejor forma de implementar la funciï¿½n amiga u optimizarla
 Complejo &operator -(const Complejo &c1, const Complejo &c2){
 	return *(new Complejo(c1.real - c2.real, c1.imaginario - c2.imaginario));
 }
@@ -126,6 +126,3 @@ double operator!(const Complejo &ptrc2){
 	
 	return sqrt1;
 }
-
-
-
